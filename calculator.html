@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="Number1" />
+    <input type="text" id="zime" />
+    <input type="number" id="Number2" />
+
+    <button id="btn">Rēķināt</button>
+
+    <script>
+      let num1 = document.getElementById("Number1");
+      let zim = document.getElementById("zime");
+      let num2 = document.getElementById("Number2");
+      let button = document.getElementById("btn");
+      let n1 = num1.value;
+      let n2 = num2.value;
+      let ziime = zim.value;
+
+      button.addEventListener("click", calk);
+      // kalkulātors māk tikai dalīt, reizināt, un atņemt
+      function calk() {
+        if (ziime === "+" && n1 > 0 && n2 > 0) {
+          res = num1.value + num2.value;
+          console.log(res);
+        } else if (ziime === "-") {
+          res = num1.value - num2.value;
+          console.log(res);
+        } else if (ziime === "*") {
+          res = num1.value * num2.value;
+          console.log(res);
+        } else if (ziime === "/") {
+          res = num1.value / num2.value;
+          console.log(res);
+        }
+      }
+    </script>
+  </body>
+</html>
